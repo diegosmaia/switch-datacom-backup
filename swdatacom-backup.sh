@@ -27,4 +27,7 @@ password='dmaiasenha'
 ###################################
 
 { echo $username; sleep 1;echo $password; sleep 1;echo "show running-config"; sleep 1; echo "close"; echo "exit" } | telnet $IP > $FILENAME-$(date "+%Y.%m.%d-%H.%M.%S").cfg
+##{ echo $username; sleep 1;echo $password; sleep 1;echo "enable";echo "copy run tftp://192.168.0.20//$FILENAME-$(date "+%Y.%m.%d-%H.%M.%S").cfg"; sleep 1; echo "close"; echo "exit" } | telnet $IP  
+
+
 
