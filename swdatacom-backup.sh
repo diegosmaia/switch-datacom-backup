@@ -26,5 +26,5 @@ password='dmaiasenha'
 # Logando no telnet do equipamento
 ###################################
 
-{ echo $username; sleep 1;echo $password; sleep 1;echo "show running-config"; sleep 1; echo "close"; echo "exit" } | telnet $IP > $FILENAME
+{ echo $username; sleep 1;echo $password; sleep 1;echo "show running-config"; sleep 1; echo "close"; echo "exit" } | telnet $IP > $FILENAME-$(date "+%Y.%m.%d-%H.%M.%S").cfg
 
