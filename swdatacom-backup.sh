@@ -26,8 +26,7 @@ password='dmaiasenha'
 # Logando no telnet do equipamento
 ###################################
 
-{ echo $username; sleep 1;echo $password; sleep 1;echo "show running-config"; sleep 1; echo "close"; echo "exit"; } | telnet $IP > $FILENAME-$(date "+%Y.%m.%d-%H.%M.%S").cfg
-##{ echo $username; sleep 1;echo $password; sleep 1;echo "enable";echo "copy run tftp://192.168.0.20//$FILENAME-$(date "+%Y.%m.%d-%H.%M.%S").cfg"; sleep 1; echo "close"; echo "exit"; } | telnet $IP  
+ {sleep 3;echo '\n';sleep 2; echo $username; sleep 2;echo $password; sleep 2;echo "enable";echo "copy startup-config tftp://172.17.3.23//$FILENAME-$(date "+%Y.%m.%d-%H.%M.%S").bin"; sleep 20; echo "close"; echo "exit"; } | telnet $IP
 
 
 
